@@ -7,31 +7,39 @@ using std::string;
 class Contact
 {
 public:
-	Contact() = default;
+	Contact(); // Default
 
-	Contact(const string &f, const string &l, unsigned p, const string &e) :
-		firstName(f), lastName(l), phoneNumber(p), email(e) { }
+	Contact(const string &firstName,
+		const string &lastName,			// 4 parameter constructor
+		const string &phoneNumber,
+		const string &email);
+
+	~Contact();
 	
-	string getFirstName() { return firstName; }
-
-	string getLastName() { return lastName; }
-
-	unsigned getphoneNumber() { return phoneNumber; }
-
-	string getemail() { return email; }
+	// Getters
 	
-	void setFirstName(string fn);
+	string getFirstName() { return this->firstName; }
 
-	void setLastName(string ln);
+	string getLastName() { return this->lastName; }
 
-	void setphoneNumber(unsigned pn);
+	string getphoneNumber() { return this->phoneNumber; }
 
-	void setemail(string em);
+	string getemail() { return this->email; }
+	
+	// Setters
+	
+	void setFirstName(const string &);
 
-private:
+	void setLastName(const string &);
+
+	void setphoneNumber(const string &);
+
+	void setemail(const string &);
+
+private: // Variables
 	string firstName;
 	string lastName;
-	unsigned phoneNumber;
+	string phoneNumber;
 	string email;
 	
 };

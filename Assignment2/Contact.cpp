@@ -2,36 +2,52 @@
 #include "Contact.h"
 #include <string>
 using std::string;
+#include <iostream>
 
 Contact::Contact()
 {
+	this->firstName = "";
+	this->lastName = "";
+	this->phoneNumber = "";
+	this->email = "";
 }
 
 
-Contact::~Contact()
+Contact::Contact(const string &firstName, 
+	const string &lastName, 
+	const string &phoneNumber,
+	const string &email) :
+	firstName(firstName),
+	lastName(lastName),
+	phoneNumber(phoneNumber),
+	email(email)
 {
 }
-
-void Contact::setFirstName(string fn)
+// Setters
+void Contact::setFirstName(const string &firstName)
 {
-	fn = firstName;
+	this->firstName = firstName;
 }
 
-void Contact::setLastName(string ln)
+void Contact::setLastName(const string &lastName)
 {
-	ln = lastName;
+	this->lastName = lastName;
 }
 
-void Contact::setphoneNumber(unsigned pn)
+void Contact::setphoneNumber(const string &phoneNumber)
 {
-	if (sizeof(pn) < 10)
-		pn = 0;
+	if (sizeof(phoneNumber) < 10) 
+		this->phoneNumber = ""; 
 	else { 
-		pn = phoneNumber; 
+		this->phoneNumber = phoneNumber; 
 	}
 }
 
-void Contact::setemail(string em)
+void Contact::setemail(const string &email)
 {
-	em = email;
+	this->email = email;
+}
+
+Contact::~Contact()
+{
 }
