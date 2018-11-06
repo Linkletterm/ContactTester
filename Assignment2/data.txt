@@ -1,0 +1,6 @@
+First Name	Last Name	Phone Number	Email
+Luke	Bryan	2074312222	lukebryan@thomas.edu
+Jason	Aldean	2074311111	jasonaldean@thomas.edu
+Kenny	Chesney	2074317898	kenneychesney@thomas.edu
+George	Jones	2074319999	jonesgeorge@thomas.edu
+John	Anderson	2074313322	andersonjohn@thomas.edu

@@ -51,3 +51,4 @@ void Contact::setemail(const string &email)
 Contact::~Contact()
 {
 }
+
